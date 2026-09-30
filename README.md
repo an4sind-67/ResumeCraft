@@ -1,44 +1,61 @@
-# ResumeCraft - Online Resume Builder (Task 2, Problem #42)
+ResumeCraft – Online Resume Builder
 
-React app where a user enters personal, education, experience, project and skill details and gets a live resume preview that can be printed / saved as PDF.
+ResumeCraft is a React-based web application that helps users create professional resumes easily. Users can enter their personal, education, experience, project, and skill details and view the resume live.
 
-## Run
-```bash
-npm install
-npm run dev      # http://localhost:5173
-npm run build    # production build in /dist
-```
+Features
 
-## Views (3 routed pages, hash routing)
-| Route | Page | Purpose |
-|---|---|---|
-| `#/` | Dashboard | create, search, filter, sort, duplicate, delete resumes |
-| `#/builder/:id` | Builder | tabbed forms + live preview + strength score |
-| `#/preview/:id` | Preview | full-size resume, template switch, print / save as PDF |
+- Create and manage resumes
+- Live resume preview
+- Add, edit, and delete education, experience, and projects
+- Skills management
+- Resume strength score
+- Search, filter, sort, and duplicate resumes
+- Multiple resume templates
+- Form validation
+- Print / Save as PDF
+- Responsive design
 
-## Requirement checklist
-- **Hooks**: `useState` (forms, tabs, filters), `useEffect` (localStorage save, hashchange listener, document title), custom hooks `useLocalStorage`, `useHashRoute`
-- **Form handling + validation**: name, email, Indian phone, URLs, year, date order, duplicate skills, title length (`utils/validators.js`)
-- **Add / edit / delete**: Education, Experience, Projects via reusable `EntryEditor`; skills chips; resume delete/duplicate
-- **Search / filter / calculation**: dashboard search + template filter + sort; skill suggestions filter; resume strength score out of 100 (`utils/resumeScore.js`)
-- **Responsive**: CSS grid/flex, breakpoints at 900px and 560px, print stylesheet
+Tech Stack
 
-## Structure
-```
+- React.js
+- JavaScript (JSX)
+- Vite
+- CSS
+- LocalStorage
+
+Project Structure
+
 src/
-  App.jsx            route switch + state
-  pages/             Dashboard, Builder, Preview
-  components/        Navbar, Field, PersonalForm, EntryEditor, SkillsEditor, ScoreCard, ResumePreview
-  hooks/             useLocalStorage, useHashRoute
-  utils/             validators, resumeScore, sampleData
-```
+├── components/
+├── hooks/
+├── pages/
+├── utils/
+├── App.jsx
+└── main.jsx
 
-## Push to GitHub
-```bash
-git init
-git add .
-git commit -m "ResumeCraft: online resume builder"
-git branch -M main
-git remote add origin https://github.com/<your-username>/resumecraft.git
-git push -u origin main
-```
+Run Locally
+
+npm install
+npm run dev
+
+Open "http://localhost:5173" in your browser.
+
+Build
+
+npm run build
+
+Data Storage
+
+Resume data is stored in the browser using LocalStorage, so no backend or database is required.
+
+Future Enhancements
+
+- User authentication
+- Cloud storage
+- More resume templates
+- AI-powered resume suggestions
+- Resume sharing
+
+Author
+
+An4sind
