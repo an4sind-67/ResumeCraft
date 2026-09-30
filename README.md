@@ -46,7 +46,7 @@ npm run build
 
 Data Storage
 
-Resume data is stored in the browser using LocalStorage, so no backend or database is required.
+Resume data is stored in the browser using LocalStorage.
 
 Future Enhancements
 
